@@ -13,6 +13,7 @@ exports.create = (data, res, model) => {
 };
 
 exports.update = (id, data, res, model) => {
+    console.log(id);
     model.update(data, {
       where: { id }
     })

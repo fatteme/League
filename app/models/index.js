@@ -20,5 +20,6 @@ db.sequelize = sequelize;
 
 db.league = require("./league.model.js")(sequelize, Sequelize);
 db.team = require("./team.model.js")(sequelize, Sequelize);
+db.employee = require("./employee.model.js")(sequelize, Sequelize);
 
 module.exports = db;

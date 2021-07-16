@@ -3,10 +3,12 @@ module.exports = app => {
 
   const league = require("../controllers/league.controller.js");
   const team = require("../controllers/team.controller.js");
+  const employee = require("../controllers/employee.controller.js");
 
   models = [
     {route:'league', model: league},
     {route:'team', model: team},
+    {route:'employee', model: employee},
   ]
 
   // general Api's
