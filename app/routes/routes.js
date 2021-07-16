@@ -2,7 +2,7 @@ module.exports = app => {
   var router = require("express").Router();
 
   const buyPlayer = require("../controllers/buyPlayer.controller.js")
-  const card = require("../controllers/card.cardcontroller.js")
+  const card = require("../controllers/card.controller.js")
   const coachingStaff = require("../controllers/coachingStaff.controller.js")
   const contract = require("../controllers/contract.controller.js")
   const employee = require("../controllers/employee.controller.js");
