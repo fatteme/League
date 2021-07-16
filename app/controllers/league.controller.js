@@ -4,7 +4,6 @@ const League = db.league;
 
 
 exports.create = (req, res) => {
-  console.log(League);
   model.create(req.body, res, League);
 };
 
