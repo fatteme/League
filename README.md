@@ -1,2 +1,2 @@
 # DB Project 
-spring 2021, Sharif University Of Technology
+Sharif University Of Technology
