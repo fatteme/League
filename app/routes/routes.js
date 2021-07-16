@@ -1,13 +1,25 @@
 module.exports = app => {
   var router = require("express").Router();
-  
-  // League Model
+
   const league = require("../controllers/league.controller.js");
-  router.post("/league", league.create);
-  router.put("/league/:id", league.update);
-  router.get("/league", league.findAll);
-  router.get("/league/:id", league.findOne);
-  router.delete("/league/:id", league.delete);
+  const team = require("../controllers/team.controller.js");
+
+  models = [
+    {route:'league', model: league},
+    {route:'team', model: team},
+  ]
+
+  // general Api's
+  for (let i = 0; i < models.length; i++){
+    const m  = models[i];
+    router.post(`/${m.route}`, m.model.create);
+    router.put(`/${m.route}/:id`, m.model.update);
+    router.get(`/${m.route}`, m.model.findAll);
+    router.get(`/${m.route}/:id`, m.model.findOne);
+    router.delete(`/${m.route}/:id`,m.model.delete);
+  }
+
+  router.get('/team/league/:id', team.findByLeague);
 
   app.use("/api", router);
 };
