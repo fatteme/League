@@ -9,7 +9,7 @@ exports.create = (req, res) => {
 
 exports.update = (req, res) => {
     const id = req.params.id;
-    model.update(id, req.body, res, Employee);
+    model.update('national_id', id, req.body, res, Employee);
   };
   
 exports.findAll = (req, res) => {

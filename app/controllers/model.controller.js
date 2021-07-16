@@ -12,10 +12,9 @@ exports.create = (data, res, model) => {
     });
 };
 
-exports.update = (id, data, res, model) => {
-    console.log(id);
+exports.update = (field, id, data, res, model) => {
     model.update(data, {
-      where: { id }
+      where: { [field]: id }
     })
       .then(num => {
         if (num == 1) {
@@ -24,13 +23,13 @@ exports.update = (id, data, res, model) => {
           });
         } else {
           res.send({
-            message: `Cannot update Data with id=${id}.`
+            message: `Cannot update Data with ${field}=${id}.`
           });
         }
       })
       .catch(err => {
         res.status(500).send({
-          message: "Error updating Data with id=" + id
+          message: `Error updating Data with ${field}= ${id}`
         });
       });
 };
