@@ -1,28 +1,28 @@
 module.exports = app => {
   var router = require("express").Router();
 
-  const buyPlayer = require("../controllers/buyPlayer.controller.js")
-  const card = require("../controllers/card.controller.js")
-  const coachingStaff = require("../controllers/coachingStaff.controller.js")
-  const contract = require("../controllers/contract.controller.js")
+  const buyPlayer = require("../controllers/buyPlayer.controller.js");
+  const card = require("../controllers/card.controller.js");
+  const coachingStaff = require("../controllers/coachingStaff.controller.js");
+  const contract = require("../controllers/contract.controller.js");
   const employee = require("../controllers/employee.controller.js");
-  const goal = require("../controllers/goal.controller.js")
+  const goal = require("../controllers/goal.controller.js");
   const league = require("../controllers/league.controller.js");
-  const lmatch = require("../controllers/lmatch.controller.js")
-  const matchTicket = require("../controllers/matchTicket.controller.js")
-  const player = require("../controllers/player.controller.js")
-  const playerMatch = require("../controllers/PlayerMatch.controller.js")
-  const referee = require("../controllers/referee.controller.js")
-  const refereeMatch = require("../controllers/refereeMatch.controller.js")
-  const stadium = require("../controllers/stadium.controller.js")
-  const superviseMatch = require("../controllers/superviseMatch.controller.js")
-  const supervisor = require("../controllers/supervisor.controller.js")
+  const lmatch = require("../controllers/lmatch.controller.js");
+  const matchTicket = require("../controllers/matchTicket.controller.js");
+  const player = require("../controllers/player.controller.js");
+  const playerMatch = require("../controllers/PlayerMatch.controller.js");
+  const referee = require("../controllers/referee.controller.js");
+  const refereeMatch = require("../controllers/refereeMatch.controller.js");
+  const stadium = require("../controllers/stadium.controller.js");
+  const superviseMatch = require("../controllers/superviseMatch.controller.js");
+  const supervisor = require("../controllers/supervisor.controller.js");
   const team = require("../controllers/team.controller.js");
-  const ticket = require("../controllers/ticket.controller.js")
-  const playerView = require("../controllers/playerView.controller.js")
-  const refereeView = require("../controllers/refereeView.controller.js")
-  const teamAdminView = require("../controllers/teamAdminView.controller.js")
-  const ticketAdminView = require("../controllers/ticketAdminView.controller.js")
+  const ticket = require("../controllers/ticket.controller.js");
+  const playerView = require("../controllers/playerView.controller.js");
+  const refereeView = require("../controllers/refereeView.controller.js");
+  const teamAdminView = require("../controllers/teamAdminView.controller.js");
+  const ticketAdminView = require("../controllers/ticketAdminView.controller.js");
 
   models = [
     { route: 'card', model: card },
