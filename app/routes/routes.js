@@ -19,6 +19,10 @@ module.exports = app => {
   const supervisor = require("../controllers/supervisor.controller.js")
   const team = require("../controllers/team.controller.js");
   const ticket = require("../controllers/ticket.controller.js")
+  const playerView = require("../controllers/playerView.controller.js")
+  const refereeView = require("../controllers/refereeView.controller.js")
+  const teamAdminView = require("../controllers/teamAdminView.controller.js")
+  const ticketAdminView = require("../controllers/ticketAdminView.controller.js")
 
   models = [
     { route: 'card', model: card },
@@ -29,11 +33,15 @@ module.exports = app => {
     { route: 'league', model: league },
     { route: 'match', model: lmatch },
     { route: 'player', model: player },
+    { route: 'player-v', model: playerView },
     { route: 'referee', model: referee },
+    { route: 'referee-v', model: refereeView },
     { route: 'stadium', model: stadium },
     { route: 'supervisor', model: supervisor },
     { route: 'team', model: team },
+    { route: 'team-v', model: teamAdminView },
     { route: 'ticket', model: ticket },
+    { route: 'ticket-v', model: ticketAdminView },
   ]
 
   // general Api's
